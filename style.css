@@ -1,0 +1,245 @@
+/* Global styles */
+body {
+  font-family: 'Exo', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+.container {
+  max-width: 800px; /* Increased container width for better layout */
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color:transparent; /* White background */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h1 {
+  text-align: center;
+  color: #333; /* Dark gray color */
+}
+
+/* Profile and actions styles */
+.admin-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent; /* Light gray background */
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.username {
+  color: #3b7ddd; /* Blue color */
+  font-weight: bold;
+  font-size: 38px;
+  margin-right: 10px;
+}
+
+.profile-status {
+  font-size: 16px;
+  color: #555; /* Dark gray color */
+  margin-top: 10px;
+}
+
+/* Menu styles */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.menu-item {
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  background-color:transparent; /* White background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  background-color: #f0f0f0; /* Lighter gray background on hover */
+}
+
+.menu-item::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0);
+}
+
+.menu-item:hover::before {
+  transform: scale(2);
+}
+
+.menu-item i {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #3b7ddd; /* Blue color */
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover i {
+  transform: rotate(360deg);
+}
+
+.menu-item a {
+  color: #3b7ddd; /* Blue color */
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.menu-item a:hover {
+  color: #333; /* Dark gray color on hover */
+}
+
+/* Animation */
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.context {
+  width: 100%;
+  position: absolute;
+  top: 50vh;
+}
+
+.context h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+}
+
+.area {
+  background: #4e54c8;
+  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+  width: 100%;
+  height: 100vh;
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}

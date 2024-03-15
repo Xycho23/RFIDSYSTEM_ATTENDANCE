@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Member Form</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Light gray background */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff; /* White background */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        h1 {
+            text-align: center;
+            color: #333; /* Dark gray color */
+        }
+
+        /* Form styles */
+        form {
+            text-align: center;
+        }
+
+        form input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 12px; /* Increased padding */
+            box-sizing: border-box;
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 5px;
+        }
+
+        form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        form button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        #error-message {
+            color: red;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /* Return button */
+        .return-btn {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+
+        .return-btn:hover {
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Add Member Form</h1>
+        <!-- HTML form for adding new members -->
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <label for="rfid">RFID:</label>
+            <input type="text" id="rfid" name="rfid" required><br><br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required><br><br>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required><br><br>
+            <!-- Add other input fields for additional member data -->
+            <button type="submit">Add Member</button>
+        </form>
+        <p id="error-message"></p>
+        <!-- Return button -->
+        <a href="dashboard" class="return-btn">Return to Dashboard</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Report - PWD Interface</title>
+    <!-- Add Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('pwd_background.jpg'); /* Replace 'pwd_background.jpg' with your background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 2000px;
+            margin: 60px auto;
+            padding: 50px;
+            border-radius: 40px;
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Arial Black', sans-serif;
+            color: #333;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+        }
+        td, th {
+            border: 1px solid #ddd;
+            padding: 18px;
+            font-family: Arial, sans-serif; /* Add font family */
+            font-size: 14px; /* Adjust font size */
+        }
+        input[type="text"] {
+            width: 100%; /* Make input fields fill the entire cell */
+            border: none;
+            outline: none;
+            background-color: transparent;
+            font-size: inherit;
+            font-family: Arial, sans-serif; /* Add font family */
+            color: #333; /* Adjust text color */
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .return-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #3b7ddd;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .return-btn:hover {
+            background-color: #335ea8;
+        }
+    </style>
+</head>
+<body>
+    <button class="return-btn" onclick="returnToDashboard()">Return to Dashboard</button>
+
+    <div class="container">
+        <h1><i class="fas fa-user-check"></i> SEE MEMBERS</h1>
+
+        <table id="memberTable">
+            <thead>
+                <tr>
+                    <th>RFID NUMBER</th>
+                    <th>Last Name</th>
+                    <th>First Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>PWD ID</th>
+                    <th>Contact Number</th>
+                    <th>Purok</th>
+                </tr>
+            </thead>
+            <tbody id="memberTableBody"></tbody> <!-- Empty tbody for dynamic insertion -->
+        </table>
+    </div>
+
+    <!-- Include your JavaScript file -->
+    <script src="script.js"></script>
+
+    <script>
+        function returnToDashboard() {
+            window.location.href = 'dashboard'; // Replace 'dashboard.html' with the path to your dashboard page
+        }
+    </script>
+</body>
+</html>
